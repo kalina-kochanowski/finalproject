@@ -1,0 +1,21 @@
+{% extends "adventure/base.html" %} <!-- Uses The Base HTML Template -->
+
+{% block title %}Index{% endblock %} <!-- Name of the Home Page as "Index" -->
+
+<!-- Body Content for This Page -->
+{% block content %}
+
+    <h1>Adventure Game</h1>
+
+    <h2>Plot Summary</h2>
+
+    <p>
+        The story is about Starla, who is the main character and she is trying to figure out who she is. Starla gets stuck in a
+        world of wonder with different areas like a forest, desert, caves, etc. It seems she is not alone, and she does not know how
+        she got stuck in this weird world. The goal is to escape and find out the truth, as well how Starla got trapped here in the first place,
+        and maybe even learn what this all means for Starla.
+    </p>
+
+    <p>By: <a href="{% url 'adventure:profile' slug='kalina_kochanowski' %}">Kalina Kochanowski</a></p>
+
+{% endblock %}

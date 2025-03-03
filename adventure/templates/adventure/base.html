@@ -1,0 +1,27 @@
+<!--Base HTML Template To Use For All Pages -->
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>{% block title %}{% endblock %}</title> <!-- Title Depends on the Page -->
+        <link rel = "stylesheet" href = {% static "adventure/style.css" %}> <!-- Uses the CSS file Put in Custom CSS from it -->
+
+    </head>
+
+    <body>
+
+        {% block content %}{% endblock %} <!-- Body Content Changes by What Page You Are On -->
+
+    </body>
+
+    <footer>
+
+        <p>Adventure Game - Created by Kalina Kochanowski Copyright 2025</p> <!-- Regular Footer to Credit Myself For This Project -->
+
+    </footer>
+</html>
