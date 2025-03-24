@@ -8,4 +8,5 @@ app_name = 'adventure' # Name of App To Be Used as a Way to Help With Linking Pa
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('player/<slug:slug>/', views.PlayerProfile.as_view(), name = 'profile'),
+    path('scenario/<int:scenario_id>/', views.adventure, name = 'game'),
 ]

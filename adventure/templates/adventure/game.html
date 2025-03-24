@@ -1,0 +1,18 @@
+{% extends "adventure/base.html" %} <!-- Uses The Base HTML Template -->
+
+{% block title %}{{ scenario.title }}{% endblock %} <!-- Name of the Home Page as "Adventure" -->
+
+<!-- Body Content for This Page -->
+{% block content %}
+
+    <h1>{{ scenario.title }}</h1>
+
+    <p>{{ scenario.desc }}</p>
+
+    <ul>
+        {% for decision in decisions %}
+            <li><a href="{% url 'adventure:game' decision.next_scenario.id %}">{{ decision.choice }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
