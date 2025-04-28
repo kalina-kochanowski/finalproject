@@ -28,6 +28,11 @@ body {
 	margin-bottom: 0em;
 }
 
+button {
+    display: block;
+    margin: auto;
+}
+
 footer {
 	font-size: 12px;
 	text-align: center;

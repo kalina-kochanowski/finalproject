@@ -1,5 +1,7 @@
 {% extends "adventure/base.html" %} <!-- Uses The Base HTML Template -->
 
+{% load static %}
+
 {% block title %}{{ scenario.title }}{% endblock %} <!-- Name of the Home Page as "Adventure" -->
 
 <!-- Body Content for This Page -->
@@ -11,8 +13,12 @@
 
     <ul>
         {% for decision in decisions %}
-            <li><a href="{% url 'adventure:game' decision.next_scenario.id %}">{{ decision.choice }}</a></li>
+            <li><a href="{% url 'adventure:jump' decision.next_scenario.id %}" data-choice>{{ decision.choice }}</a></li>
         {% endfor %}
     </ul>
 
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="{% static 'adventure/game.js' %}"></script>
 {% endblock %}
